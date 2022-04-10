@@ -6,6 +6,14 @@ deleteWords = []
 greenLetters = []
 
 
+
+def clearList():
+    for delWord in deleteWords:
+        try:
+            words.remove(delWord)
+        except: 
+            pass
+
 useExtraWords = input("Would you like to limit the search to the official Wordle wordlist? (y/n)")
 
 if useExtraWords == 'y':
@@ -21,6 +29,8 @@ for letter in redLetters:
         if letter in myWord:
             #check if my word is already in deletewords before appneding
             deleteWords.append(myWord)
+            
+clearList()
 
 greenCount = input("How many green letters do you know?")
 greenLetters = []
@@ -38,10 +48,7 @@ for i in range(int(greenCount)):
 
 
 
-for delWord in deleteWords:
-    try:
-        words.remove(delWord)
-    except: 
-        pass
+
+
 print(greenLetters)
 print(words)
