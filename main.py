@@ -3,6 +3,8 @@ import wordList
 
 words = []
 deleteWords = []
+greenLetters = []
+
 
 useExtraWords = input("Would you like to limit the search to the official Wordle wordlist? (y/n)")
 
@@ -17,17 +19,29 @@ redLetters = input("Which letters have been eliminated from the puzzle? Do not u
 for letter in redLetters:
     for myWord in words:
         if letter in myWord:
+            #check if my word is already in deletewords before appneding
             deleteWords.append(myWord)
-    print(letter, words)
+
+greenCount = input("How many green letters do you know?")
+greenLetters = []
+
+for i in range(int(greenCount)):
+    print(i)
+    toAdd = [
+        input("What letter do you know the position of? "),
+        input("What position is it in? ")
+    ]
+    greenLetters.append(toAdd)
+    
+
+    
+
+
 
 for delWord in deleteWords:
     try:
         words.remove(delWord)
     except: 
         pass
-        
-        
-
+print(greenLetters)
 print(words)
-
-    
