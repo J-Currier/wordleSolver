@@ -74,12 +74,11 @@ for i in yellowLetters:
         for myWord in words:
             if myWord[j-1] == i[0]:
                 deleteWords.append(myWord)
+            if i[0] not in myWord:
+                deleteWords.append(myWord)
                 
 clearList()
-    
 
 
 
-
-
-print(words, "wordsend")
+print(words, "wordsEnd")
