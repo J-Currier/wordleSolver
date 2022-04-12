@@ -14,6 +14,7 @@ def clearList():
         except: 
             pass
     print("done clearwords")
+    deleteWords.clear()
     
     
 
@@ -34,7 +35,6 @@ for letter in redLetters:
             deleteWords.append(myWord)
             
 clearList()
-deletewords = []
 
 
 greenCount = input("How many green letters do you know?")
@@ -55,7 +55,6 @@ for i in greenLetters:
             deleteWords.append(myWord)
             
 clearList()   
-deletewords = []
 
     
 yellowCount = input("How many yellow letters do you know?")
@@ -81,4 +80,4 @@ clearList()
 
 
 
-print(words, "wordsEnd")
+print("Possible words are: ", words)
