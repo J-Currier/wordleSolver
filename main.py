@@ -13,7 +13,6 @@ def clearList():
             words.remove(delWord)
         except: 
             pass
-    print("done clearwords")
     deleteWords.clear()
     
     
